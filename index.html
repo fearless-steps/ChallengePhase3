@@ -28,7 +28,7 @@
 		<a href="#Introduction">Introduction</a><br>
 		<a href="#Announcements">Announcements</a><br>
 		<!--<a href="#FS-02_Challenge_Data">FS-02 Challenge Data</a><br>-->
-		<!--<a href="#Timeline">Timeline</a><br>-->
+		<a href="#Timeline">Timeline</a><br>
 		<a href="#Register">Register</a><br>
 		<a href="#19k_Corpus_Access">19k Corpus Access</a><br>
 		<!--<a href="#News">In the News!</a><br>-->
@@ -43,7 +43,8 @@
 </div>
 <div class="top-nav">
 		<a class="active" href="index.html">Home</a>
-		<a href="Register.html">Register</a>
+		<a href="registration.html">Register</a>
+		<a href="submission.html">Submission</a>
 		<!--
 		<a href="Data.html">FSC-2 Data</a>
 		
@@ -59,7 +60,7 @@
 <h2>Introduction</h2>
 <p>The Fearless Steps Initiative by UTDallas-CRSS led to the digitization, recovery, and diarization of 19,000 hours of original analog audio data, as well as the development of algorithms to extract meaningful information from this multichannel naturalistic data resource. As an initial step to motivate a stream-lined and collaborative effort from the speech and language community, UTDallas-CRSS is hosting a series of progressively complex tasks to promote advanced research on naturalistic “Big Data” corpora. This began with <a href="https://www.interspeech2019.org/posts/one-giant-leap-for-mankind/">ISCA INTERSPEECH-2019</a>: "The FEARLESS STEPS Challenge: Massive Naturalistic Audio (FS-#1)". This first edition of this challenge encouraged the development of core unsupervised/semi-supervised speech and language systems for single-channel data with low resource availability, serving as the “First Step” towards extracting high-level information from such massive unlabeled corpora.This was followed with <a href="http://www.interspeech2020.org/index.php?m=content&c=index&a=show&catid=322&id=843">ISCA INTERSPEECH-2020</a> which held the Special Session for FEARLESS STEPS Challenge (FS-2), which focused on developing supervised learning strategies for the 100 hour Challenge Corpus.</p>
 
-<p>As a natural progression following the successful Inaugural Challenge FEARLESS STEPS Challenge Phase-#1 and FEARLESS STEPS Challenge Phase-#2, the FEARLESS STEPS Challenge Phase-#3 focuses on development of single-channel supervised learning strategies with an aim to test system generalizability to varying channel and mission data. FS#3 also provides an additional challenge task of Conversational Analysis, motivating researchers to work on natural language understanding and group dynamics analysis. FS#3 provides 80 hours of ground-truth data through Training and Development sets, with 20 hours of blind-set Apollo-11 evaluation data, 5 hours of unseen channel evaluation data and an additional 5 hours of blind-set Apollo-13 mission evaluation data. Based on feedback from the Fearless Steps participants, additional Tracks for streamlined speech recognition, speaker diarization, and conversational analysis have been included in the FS#3. The results for this Challenge will be presented at the ISCA INTERSPEECH-2021 Special Session. We encourage participants to explore any and all research tasks of interest with the Fearless Steps Corpus – with suggested Task Domains listed below. Research participants can however, also utilize the FS#3 corpus to explore additional problems dealing with naturalistic data, which we welcome as part of the special session.</p>
+<p>As a natural progression following the successful Inaugural Challenge FEARLESS STEPS Challenge Phase-#1 and FEARLESS STEPS Challenge Phase-#2, the FEARLESS STEPS Challenge Phase-#3 (FSC P3) focuses on development of single-channel supervised learning strategies with an aim to test system generalizability to varying channel and mission data. FSC P3 also provides an additional challenge task of Conversational Analysis, motivating researchers to work on natural language understanding and group dynamics analysis. FSC P3 provides 80 hours of ground-truth data through Training and Development sets, with 20 hours of blind-set Apollo-11 evaluation data, 5 hours of unseen channel evaluation data and an additional 5 hours of blind-set Apollo-13 mission evaluation data. Based on feedback from the Fearless Steps participants, additional Tracks for streamlined speech recognition, speaker diarization, and conversational analysis have been included in the FSC P3. The results for this Challenge will be presented at the ISCA INTERSPEECH-2021 Special Session. We encourage participants to explore any and all research tasks of interest with the Fearless Steps Corpus – with suggested Task Domains listed below. Research participants can however, also utilize the FSC P3 corpus to explore additional problems dealing with naturalistic data, which we welcome as part of the special session.</p>
 
 
 <!--
@@ -67,12 +68,11 @@
 <p>As a natural progression following the successful <a href="http://fearlesssteps.exploreapollo.org/">Inaugural Challenge FS#1</a>, the <a href="https://fearless-steps.github.io/ChallengePhase2/">FEARLESS STEPS Challenge Phase-#2</a> focuses on the development of single-channel supervised learning strategies. This FS#2 provides 80 hours of ground-truth data through Training and Development sets, with an additional 20 hours of blind-set Evaluation data. Based on feedback from the Fearless Steps participants, additional Tracks for streamlined speech recognition and speaker diarization have been included in the FS#2. The results for this Challenge will be presented at the ISCA INTERSPEECH-2020 Special Session. We encourage participants to explore any and all research tasks of interest with the Fearless Steps Corpus – with suggested Task Domains listed below. Research participants can, however, also utilize the FS#2 corpus to explore additional problems dealing with naturalistic data, which we welcome as part of the special session.</p>
 -->
 <div class="sub-article">
-<h3>Challenge Tasks in Phase-3 (FS#3)</h3>
+<h3>Challenge Tasks in Phase-3 (FSC P3)</h3>
 <p><ul>
   										<li> <u>TASK#1</u>: Speech Activity Detection: SAD</li><br>
 										<li> <u>TASK#2</u>: Speaker Identification: SID</li><br>
-										<li> <u>TASK#3</u>: Speaker Diarization: SD</li><br>
-										
+										<li> <u>TASK#3</u>: Speaker Diarization: SD</li><br>										
 										<ul><li> <u>3a. Track 1:</u> Diarization using system SAD</u></li><br>
 										<li> <u>			3b. Track 2:</u> Diarization using reference SAD</u></li><br></ul>
 										<li> <u>TASK#4</u>: Automatic Speech Recognition: ASR</li><br>
@@ -123,7 +123,7 @@
 
 
 </div>
-
+-->
 <div class="article" id="Timeline">
 <h2>Timeline</h2>
 <table class="table-outline">
@@ -133,46 +133,59 @@
   							</tr>
   							<tr>
   								<td>Registration Period </td>
-  								<td>February 11, 2020 to March 15, 2020</td>
-  							</tr>	
-  							<tr>
-  								<td>Challenge Start date </td>
-  								<td>February 5, 2020</td>
-  							</tr>	
-  							<tr>
-  								<td>Scoring Toolkits, Evaluation Rules and Baseline Results Release </td>
-  								<td>April 12, 2020</td>
+  								<td>February 12, 2021 to March 14, 2021</td>
   							</tr>
   							<tr>
-  								<td>System Submission Opens<strong style="color: red;">*</strong> </td>
-  								<td>May 1, 2020</td>
+  								<td>Training and Development Data Release  </td>
+  								<td>February 12, 2021</td>
+  							</tr>		
+  							<tr>
+  								<td>Evaluation plan Release </td>
+  								<td>February 20, 2021</td>
+  							</tr>	
+  							<tr>
+  								<td>Evaluation data Release </td>
+  								<td>March 1, 2021</td>
   							</tr>
   							<tr>
-  								<td>System Submission Deadline </td>
-  								<td>May 13, 2020 </td>
+  								<td>System Submission Opens </td>
+  								<td>March 1, 2021</td>
+  							</tr>	
+  							<tr>
+  								<td>Baseline Description and Results </td>
+  								<td>March 15, 2021 </td>  							
+  							</tr>
+  							<tr>
+  								<td>INTERSPEECH-2021 Paper Registration Deadline </td>
+  								<td>March 26, 2021 <br>(see <a href="https://www.interspeech2021.org/special-sessions-challenges">IS-2021 dates</a>)</td>  							
+  							</tr>
+  							<tr>
+  								<td>Final System Submission Deadline </td>
+  								<td>March 31, 2021</td>
+  							</tr>	
+  							<tr>
+  								<td>Final Results Announced for all Tasks </td>
+  								<td>April 1, 2021 </td>  							
+  							</tr>
   							
-  							</tr>
   							<tr>
-  								<td>Final Results Released for all tasks</td>
-  								<td>May 14, 2020 (see <a href="https://fearless-steps.github.io/ChallengePhase2/Final.html">Leaderboard</a>)</td>
-  							</tr>
-  							<tr>
-  								<td>INTERSPEECH-2020 FEARLESS STEPS Special Session Submission deadline</td>
-  								<td>May 8, 2020 (see <a href="http://www.interspeech2020.org/dates/">IS-2020 dates</a>)</td>
+  								<td>INTERSPEECH-2021 FEARLESS STEPS Paper Submission Deadline</td>
+  								<td>April 2, 2021 <br>(see <a href="https://www.interspeech2021.org/important-dates">IS-2021 dates</a>)</td>
+  								</tr>
   								
   							<tr>
-  								<td>Paper Revision Deadline</td>
-  								<td>May 15, 2020 (see <a href="http://www.interspeech2020.org/dates/">IS-2020 dates</a>)</td>
+  								<td>INTERSPEECH-2021 FEARLESS STEPS Special Session</td>
+  								<td>August 30 - September 3, 2021 <br>(see <a href="https://www.interspeech2021.org/special-sessions-challenges">IS-2021 dates</a>)</td>
   							</tr>
   							
   								
 
   						</table>
   						<br>
-  						<p><strong style="color: red;">*</strong>Further details regarding the system submission will be disclosed on the website and through email correspondence on April 6th,2020.</p>
+  						
 <p>&nbsp;</p>
 </div>
--->
+
 <div class="article" id="Register">
 <h2>Register</h2>
 <p>Please provide a valid email to receive more details about the challenge.

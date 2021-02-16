@@ -299,6 +299,20 @@ height:80%;
 margin: 10px;
 border: 1px solid black;
 }
+.table-outline-sub {
+border-collapse: collapse;
+width: 70%;
+height:60%;
+margin: 10px;
+border: 1px solid black;
+margin-left: auto;
+  margin-right: auto;
+  
+}
+.table-outline-sub td {
+border:1px solid black;
+font-size: 18px;
+}
 .table-outline td,th {
 text-align: center;
 padding: 15px;

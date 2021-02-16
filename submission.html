@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fearless Steps Challenge: Phase 3 Register</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/styles.css"> 
+	
+</head>
+<body>
+<div class="page-wrapper">
+<div class="top-banner">
+<h1> Fearless Steps Challenge:<br>Phase III</h1>
+
+
+</div>
+<div class="top-top-nav">
+
+<div class="tabs">
+	<div class="tabs-img">
+		<img src="images/top-1.jpg" alt="Fearless Engineering" id="fearless">
+		
+		</div>
+	<div class="links">
+		<!--<a href="#Track_1"><u><strong>Speech Activity Detection</strong></u></a><br>-->
+		
+		<div class="links">
+			<a href="#Overview">Overview</a><br>
+			<a href="#Submit">Submitting an archive via the NIST Dashboard</a><br>
+			<a href="#Tasks">Submission for each Task</a><br>
+			<a href="#Eval_rules">Evaluation Rules</a><br>
+			<a href="#Eval_protocol">Evaluation Protocol</a><br>
+			<!--<a href="#Track_1">Baseline</a><br>
+			<a href="#Track_1">References</a><br>-->
+		
+		</div>
+		
+		
+	</div>
+</div>
+<div class="image-top" >
+<img src="images/Logos.png" alt="" id="logo">
+</div>
+<div class="top-nav">
+		<a href="index.html">Home</a>
+		<a href="Register.html">Register</a>
+		<a class="active"href="submission.html">Submission</a>
+		<!--
+		<a href="Data.html">FSC-2 Data</a>
+		
+		<a href="Submission.html">Submission</a>
+		<a href="SAD.html">SAD</a>
+		<a href="DIAR.html">DIAR</a>
+		<a href="SID.html">SID</a>
+		<a href="ASR.html">ASR</a>
+		<a href="Final.html">Leaderboard</a>
+		-->	
+	</div>
+<div class="article" id="Overview">
+<h2>Overview</h2>
+<p>
+All evaluation activities will be conducted using a NIST maintained web platform shared with OpenSAT. Each participant will need to create an account on this web platform to register. This will allow them to perform various activities such as registering for the evaluation, signing the data license agreement, and uploading submissions.</p>
+
+<p>After registering and agreeing to the NIST FSC-P3 Terms and Conditions, participants will be able to participate in the FSC P3. This page contains step-by-step instructions for creating the evaluation account, joining a site and team, selecting tasks, and signing the relevant agreements.
+</p>
+
+</div>
+<div class="article" id="Submit">
+<h2>Submitting an archive via the NIST dashboard</h2>
+
+
+To sign up for an evaluation account, navigate to the <a href="https://sat.nist.gov/fsc3"> OpenSAT Series FSC P3 page</a> on the OpenSAT site and follow the steps below:
+<div class="sub-article">
+<p>
+<ul>
+<li>To submit output of a system for scoring, log into your participant account and select <strong>Dashboard</strong> from the top right of the page</li>
+<li>Navigate to the <strong>Submission Management</strong> panel and click on the task that you wish to submit to.
+This will open the <strong>Submissions</strong> page</li>
+<li>Click <strong>Add new system</strong></li>
+<li>Select the system type</li>
+<li>Select <strong>primary</strong> if you wish for the scoring results to be displayed on the leaderboard</li>
+<li>Select <strong>contrastive</strong> otherwise</li>
+<li>Enter a name for your system</li>
+<li>Click <strong>Submit</strong></li>
+</ul>
+<p>This registers your submission with the scoring server. Next, you need to upload the archive containing your system output. 
+<ul>
+<li>Locate your submission on the <strong>Submissions page</strong>. As the entries on this page are displayed in ascending order of submission date, it will be at the very bottom.</li> 
+<li>Find your submission and Click <strong>Upload.</strong></li>
+<li>Select the output you want to upload.</li>
+<li>Click <strong>Submit.</strong></li>
+</ul>
+</p>
+<p>At this point your archive will be uploaded to the NIST server and the following will occur:<br>
+<ul>
+<li>A unique submission ID will be generated; this will be used to track your submission</li>
+<li>Your submission will be validated</li>
+<li>If the submission passes validation, it will be scored</li>
+</ul></p>
+<ul>
+<li>When the server finishes scoring your submission, it will display the status <strong>DONE</strong>. To access the scoring results, click on this status.</li>
+<li>If for any reason scoring failed, it will display a status beginning with <strong>FAIL</strong>. Clicking on this status will open the error log from the scoring script, which can be used to debug your submission.</li>
+</ul>
+</p>
+</div>
+</div>
+<div class="article" id="Tasks">
+<h2>Submission for each Task</h2>
+<div class="sub-article" id="SAD_sub">
+<h3>Speech Activity Detection</h3>
+<p>
+System output for each track should be submitted as a .zip that expands into a single directory of txt files containing one txt file for each recording. <br>
+Systems should output their SAD as text (txt) files 9 A NIST defined File Format, the text files are text files containing one turn per line, each line containing nine tab-delimited fields:
+
+</p>
+<table class="table-outline-sub">
+  							<tr>
+  								<td>Test</td>
+  								<td>Test Definition File Name (Value: X)</td>
+  							</tr>
+  							<tr>
+  								<td>TestSet ID</td>
+  								<td>contents of the id attribute TestSet tag (Value: X)</td>
+  							</tr>
+  							<tr>
+  								<td>Test ID</td>
+  								<td>contents of the id attribute of the TEST tag (Value: X)</td>
+  							</tr>	
+  							<tr>
+  								<td>Task</td>
+  								<td>SAD <== a literal text string, without quotations (Value: SAD)</td>
+  							</tr>		
+  							<tr>
+  								<td>File ID</td>
+  								<td>contents of the id attribute of the File tag (Value: X)</td>
+  							</tr>	
+  							<tr>
+  								<td>Interval start</td>
+  								<td>an offset, in seconds from the start of the audio file for the start of the speech/non-speech
+interval (Value: floating number)</td>
+  							</tr>
+  							<tr>
+  								<td>Interval end </td>
+  								<td>an offset, in seconds from the end of the audio file for the end of the speech/non-speech
+interval (Value: floating number)</td>
+  							</tr>
+  							<tr>
+  								<td>Type </td>
+  								<td>In system output: speech/non-speech without quotation marks (Value: speech/nonspeech)<br>
+In the reference: S/NS for speech/non-speech</td>
+  							</tr>
+  							<tr>
+  								<td>Confidence Score</td>
+  								<td>(Optional) A value in the range 0 thorugh 1.0, with higher values indicating greater
+confidence about the presence/absence of speech</td>
+  							</tr>
+  							
+  						</table>
+
+<p> 
+Use the appropriate script to generate DCF Scores for FSC P3 Challenge SAD Task<br>
+<p></p>
+<strong>USAGE:</strong><br>
+<p>
+			bash scoreFS03_SAD.sh &lt;ref_path&gt; &lt;hyp_path&gt; &lt;out_path&gt; 
+</p> 
+<ul>
+<li> ref_path: Reference (Ground Truth) Directory Path</li>
+<li> hyp_path: Hypothesis (System Output) Directory Path</li>
+<li> out_path: File Path to write DCF Scores </li>
+</ul>       
+ 
+<p>
+Example submission packet can be found in the toolkit, link provided <a href="https://github.com/aditya-joglekar/FS02_Scoring_Toolkit"> here<a/>
+</p>
+
+</p>
+</div>
+<br>
+<div class="sub-article" id="SID_sub">
+<h3>Speaker Identification</h3>
+<p>
+System output for each track should be submitted as a .zip that expands into a single directory of txt files containing one txt file with all results as shown in the example in the submission packet. <br>
+The SID output file should be a text file containing one test-segment per line, each line containing five space delimited fields<br>
+
+</p>
+<table class="table-outline-sub">
+  							<tr>
+  								<td>Test</td>
+  								<td>Test Definition File Name</td>
+  							</tr>
+  							<tr>
+  								<td>Prediction 1</td>
+  								<td>fTop System SpeakerID Prediction</td>
+  							</tr>
+  							<tr>
+  								<td>Prediction 2</td>
+  								<td>2nd Most Likely System SpeakerID Prediction</td>
+  							</tr>		
+  							<tr>
+  								<td>Prediction 3 </td>
+  								<td>3rd Most Likely System SpeakerID Prediction</td>
+  							</tr>	
+  							<tr>
+  								<td>Prediction 4 </td>
+  								<td>4th Most Likely System SpeakerID Prediction</td>
+  							</tr>
+  							<tr>
+  								<td>Prediction 5 </td>
+  								<td>5th Most Likely System SpeakerID Prediction</td>
+  							</tr>
+  							<tr> 								
+
+  						</table>
+
+<p> 
+Use the appropriate script to generate Top-3 Accuracy Scores for FSC P3 Challenge SAD Task<br>
+<p></p>
+<strong>USAGE:</strong><br>
+<p>
+			bash scoreFS03_SID.sh &lt;ref_path&gt; &lt;hyp_path&gt; &lt;out_path&gt; 
+</p> 
+<ul>
+<li> ref_path: Reference (Ground Truth) Directory Path</li>
+<li> hyp_path: Hypothesis (System Output) Directory Path</li>
+<li> out_path: File Path to write Top-3 Accuracy Score </li>
+</ul>       
+ 
+<p>
+Example submission packet can be found in the toolkit, link provided <a href="https://github.com/aditya-joglekar/FS02_Scoring_Toolkit"> here<a/>
+</p>
+
+</p>
+</div>
+<br>
+<div class="sub-article" id="SD_sub">
+<h3>Speaker Diarization</h3>
+<p>
+System output for each track should be submitted as a .zip that expands into a single directory of s Rich Transcription Time Marked (RTTM) files containing one RTTM file for each recording. <br>
+A NIST defined File Format, the RTTM files are text files containing one turn per line, each line containing nine space-delimited fields:<br>
+
+</p>
+<table class="table-outline-sub">
+  							<tr>
+  								<td>Type</td>
+  								<td>segment type; should always by “SPEAKER”</td>
+  							</tr>
+  							<tr>
+  								<td>File ID</td>
+  								<td>file name; basename of the recording minus extension (e.g., “FS P01 eval 023”)</td>
+  							</tr>
+  							<tr>
+  								<td>Channel ID</td>
+  								<td>channel (1-indexed) that turn is on; should always be “1”</td>
+  							</tr>		
+  							<tr>
+  								<td>Turn Onset   </td>
+  								<td>onset of turn in seconds from beginning of recording</td>
+  							</tr>	
+  							<tr>
+  								<td>Turn Duration</td>
+  								<td>duration of turn in seconds</td>
+  							</tr>
+  							<tr>
+  								<td>Orthography Field</td>
+  								<td>should always by “&lt;NA&gt;”</td>
+  							</tr>
+  							<tr>
+  								<td>Speaker Type </td>
+  								<td>should always by “&lt;NA&gt;”</td>
+  							</tr>
+  							<tr>
+  								<td>Speaker Name </td>
+  								<td>name of speaker of turn; should be unique within scope of each file</td>
+  							</tr>
+  							<tr>
+  								<td>Confidence Score</td>
+  								<td>(Optional) system confidence (probability) that information is correct; should always
+be &lt;NA&gt;</td>
+  							</tr>
+							
+  							
+  							
+  								
+
+  						</table>
+
+<p> 
+Use the appropriate script to generate DER Scores for FSC P3 Challenge SAD Task<br>
+<p></p>
+<strong>USAGE:</strong><br>
+<p>
+			bash scoreFS03_SD.sh &lt;ref_path&gt; &lt;hyp_path&gt; &lt;out_path&gt; 
+</p> 
+<ul>
+<li> ref_path: Reference (Ground Truth) Directory Path</li>
+<li> hyp_path: Hypothesis (System Output) Directory Path</li>
+<li> out_path: File Path to write DER Scores </li>
+</ul>       
+ 
+<p>
+Example submission packet can be found in the toolkit, link provided <a href="https://github.com/aditya-joglekar/FS02_Scoring_Toolkit"> here<a/>
+</p>
+
+</p>
+</div>
+<br>
+<div class="sub-article" id="ASR_sub">
+<h3>Automatic Speech Recognition</h3>
+<p>
+System output for each track should be submitted as a .zip that expands into a single directory of JSON format files containing one JSON file for each recording. <br>
+The transcriptions are provided in JSON format for each file as <file ID>.json. The JSON file includes the
+following pieces of information for each utterance:<br>
+
+</p>
+<table class="table-outline-sub">
+  							<tr>
+  								<td>Speaker ID</td>
+  								<td>Token: “speakerID”</td>
+  							</tr>
+  							<tr>
+  								<td>Transcription </td>
+  								<td>Token: “words”</td>
+  							</tr>
+  							<tr>
+  								<td>Conversational Label</td>
+  								<td>Token: “conv”</td>
+  							</tr>		
+  							<tr>
+  								<td>Start Time  </td>
+  								<td>Token: “startTime”</td>
+  							</tr>	
+  							<tr>
+  								<td>End Time </td>
+  								<td>Token: “endTime”</td>
+  							</tr>
+  							
+  							
+  								
+
+  						</table>
+<p> 
+Use the appropriate script to generate WER Scores for FSC P3 Challenge SAD Task<br>
+<p></p>
+<strong>USAGE:</strong><br>
+<p>
+			bash scoreFS03_ASR.sh &lt;ref_path&gt; &lt;hyp_path&gt; &lt;out_path&gt; 
+</p> 
+<ul>
+<li> ref_path: Reference (Ground Truth) Directory Path</li>
+<li> hyp_path: Hypothesis (System Output) Directory Path</li>
+<li> out_path: File Path to write Overall WER Score </li>
+</ul>       
+ 
+<p>
+Example submission packet can be found in the toolkit, link provided <a href="https://github.com/aditya-joglekar/FS02_Scoring_Toolkit"> here<a/>
+</p>
+
+</p>
+</div>
+
+<br>
+<div class="sub-article" id="conv_sub">
+<h3>Conversational Analysis</h3>
+<p>
+System output for each track should be submitted as a .zip that expands into a single directory of JSON format files containing one JSON file for each recording. <br>
+The transcriptions are provided in JSON format for each file as <file ID>.json. The JSON file includes the following pieces of information for each utterance:<br>
+-------MAKE TABLE---------
+</p>
+<table class="table-outline-sub">
+  							<tr>
+  								<td>Speaker ID</td>
+  								<td>Token: “speakerID”</td>
+  							</tr>
+  							<tr>
+  								<td>Transcription </td>
+  								<td>Token: “words”</td>
+  							</tr>
+  							<tr>
+  								<td>Conversational Label</td>
+  								<td>Token: “conv”</td>
+  							</tr>		
+  							<tr>
+  								<td>Start Time  </td>
+  								<td>Token: “startTime”</td>
+  							</tr>	
+  							<tr>
+  								<td>End Time </td>
+  								<td>Token: “endTime”</td>
+  							</tr>
+  							
+  							
+  								
+
+  						</table>
+<p> 
+Use the appropriate script to generate Top-3 Accuracy for FSC P3 Challenge SAD Task<br>
+<p></p>
+<strong>USAGE:</strong><br>
+<p>
+			bash scoreFS03_Conv.sh &lt;ref_path&gt; &lt;hyp_path&gt; &lt;out_path&gt; 
+</p> 
+<ul>
+<li> ref_path: Reference (Ground Truth) Directory Path</li>
+<li> hyp_path: Hypothesis (System Output) Directory Path</li>
+<li> out_path: File Path to write Top-3 Accuracy </li>
+</ul>       
+ 
+</p>
+</div>
+</div>
+
+<div class="article" id="Eval_rules">
+<h2>Evaluation Rules</h2>
+<p>
+<ol>
+<li>Site registration will be required in order to participate</li>
+<li>Researchers who register but do not submit a system to the Challenge are considered withdrawn from the Challenge</li>
+<li>Researchers may use any audio and transcriptions to build their systems with the exception of data mentioned in the Evaluation plan</li>
+<li>Only the audio for the blind eval set (20 hours) will be released. Researchers are expected to
+run their systems on the blind eval set.</li>
+<li>Investigation of the evaluation data prior to submission of all systems outputs is not allowed.
+Human probing is prohibited.</li>
+
+</ol>
+</p>
+<p>
+All Challenge participants are required to submit a conference paper(s) describing their systems
+(and reporting performance on Dev and Eval sets) to the ”FEARLESS STEPS CHALLENGE
+PHASE-3” Special Sessions section at ISCA INTERSPEECH-2021.
+</p>
+
+
+</div>
+
+<div class="article" id="Eval_protocol">
+<h2>Evaluation Protocol</h2>
+<p>
+<ul>
+<li>The entire Fearless Steps Corpus (consisting of over 11,000 hours of audio from the Apollo-11
+Mission) including the 100 hours is publicly available and requires no additional license to
+use the data.</li>
+<li>There is no cost to participate in the Fearless Steps evaluation. Development data and
+evaluation data will be freely made available to registered participants.</li>
+<li>At least one participant from each team must register on the Fearless Steps Challenge 2021.</li>
+<li>System output submissions will be sent to the official Fearless Steps correspondence email-id.</li>
+<li>Participants can submit at most 2 system submissions per day.</li>
+<li>Results of submitted systems will be mailed to the registered email-id within a week of the
+submission.</li>
+<li>It is required that participants agree to process the data in accordance with the following
+rules.</li>
+</ul>
+
+</p>
+
+</div>
+
+
+
+</div>
+</div>
+
+</body>
+
+
+</html>
